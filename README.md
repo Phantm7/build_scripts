@@ -7,5 +7,5 @@ curl https://raw.githubusercontent.com/PhantomEnigma/build_scripts/derp-14-mtho/
 
 ### For crave
 ```
-crave run --clean --no-patch -- "curl https://raw.githubusercontent.com/PhantomEnigma/build_scripts/derp-14-mtho/script.sh | bash"
+crave run --no-patch -- "curl https://raw.githubusercontent.com/PhantomEnigma/build_scripts/derp-14-mtho/script.sh | bash"
 ```
