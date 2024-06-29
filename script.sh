@@ -47,7 +47,7 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch derp_mi439-ap1a-userdebug || lunch derp_mi439-userdebug
+lunch derp_Mi439_4_19-ap1a-userdebug || lunch derp_Mi439_4_19-userdebug
 echo "============="
 # Make cleaninstall
 make installclean
