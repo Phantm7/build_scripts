@@ -3,13 +3,13 @@
 rm -rf .repo/local_manifests/
 
 # repo init rom
-repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 14
+repo init --depth=1 -u https://github.com/ProjectBlaze/manifest -b 14-QPR3
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/PhantomEnigma/local_manifests -b a14-derp .repo/local_manifests
+git clone https://github.com/PhantomEnigma/local_manifests -b a14-projectblaze .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -21,21 +21,11 @@ echo "Sync success"
 echo "============="
 
 # keys
-git clone https://github.com/PhantomEnigma/build_keys.git -b keys build_keys
-cp build_keys/* vendor/derp/signing/keys
+git clone https://github.com/PhantomEnigma/build_keys.git -b blaze-keys build_keys
+cp build_keys/* vendor/extra
 echo "============="
 echo "Keys copied"
 echo "============="
-
-# Remove overrides
-# Define a list of packages to remove
-echo "===== Remove overrides started ====="
-OVER_PACKAGES=("Dialer" "Contacts Contacts2" "messaging" "DeskClock" "Messaging" "Contacts" "webview Browser2" "webview" "Browser2" "PicoTts" "LatinIME")
-# Loop through the list and remove each package from Android.mk files
-for PACKAGEU in "${OVER_PACKAGES[@]}"; do
-  find vendor/gms -name 'Android.mk' -exec sed -i "/^LOCAL_OVERRIDES_PACKAGES := $PACKAGEU$/d" {} \;
-done
-echo "===== Remove overrides Success ====="
 
 # Export
 export BUILD_USERNAME=Phantom
@@ -47,10 +37,11 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch derp_Mi439_4_19-ap1a-userdebug || lunch derp_Mi439_4_19-userdebug
+lunch blaze_Mi439_4_19-ap1a-userdebug || lunch blaze_Mi439_4_19-userdebug
 echo "============="
 # Make cleaninstall
 make installclean
 echo "============="
+
 # Build rom
-mka derp
+mka bacon
