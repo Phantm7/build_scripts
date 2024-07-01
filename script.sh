@@ -29,6 +29,7 @@ echo "============="
 # Export
 export BUILD_USERNAME=Phantom
 export BUILD_HOSTNAME=crave
+export BLAZE_MAINTAINER=Phantom
 echo "======= Export Done ======"
 
 # Set up build environment
