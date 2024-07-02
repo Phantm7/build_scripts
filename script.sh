@@ -21,7 +21,6 @@ echo "Sync success"
 echo "============="
 
 # keys
-rm -rf vendor/extra
 git clone https://github.com/PhantomEnigma/build_keys.git -b blaze-keys vendor/extra
 echo "============="
 echo "Keys copied"
