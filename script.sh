@@ -20,13 +20,6 @@ echo "============="
 echo "Sync success"
 echo "============="
 
-# keys
-rm -rf vendor/lineage-priv
-git clone https://github.com/PhantomEnigma/build_keys.git -b lin-keys vendor/lineage-priv
-echo "============="
-echo "Keys copied"
-echo "============="
-
 # Export
 export BUILD_USERNAME=Phantom
 export BUILD_HOSTNAME=crave
