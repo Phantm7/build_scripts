@@ -21,8 +21,8 @@ echo "Sync success"
 echo "============="
 
 # keys
-rm -rf vendor/lineage-priv
-git clone https://github.com/PhantomEnigma/build_keys.git -b lin-keys vendor/lineage-priv
+mkdir vendor/lineage-priv
+cp build-keys/* vendor/lineage-priv
 echo "============="
 echo "Keys copied"
 echo "============="
