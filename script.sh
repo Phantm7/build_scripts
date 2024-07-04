@@ -3,13 +3,13 @@
 rm -rf .repo/local_manifests/
 
 # repo init rom
-repo init --depth=1 -u https://github.com/ProjectBlaze/manifest -b 14-QPR3
+repo init -u https://github.com/Evolution-XYZ/manifest -b udc --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/PhantomEnigma/local_manifests -b a14-projectblaze .repo/local_manifests
+git clone https://github.com/PhantomEnigma/local_manifests -b a14-evoxyz .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -21,7 +21,8 @@ echo "Sync success"
 echo "============="
 
 # keys
-git clone https://github.com/PhantomEnigma/build_keys.git -b blaze-keys vendor/extra
+rm -rf vendor/lineage-priv
+git clone https://github.com/PhantomEnigma/build_keys.git -b lin-keys vendor/lineage-priv
 echo "============="
 echo "Keys copied"
 echo "============="
@@ -36,11 +37,12 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch blaze_Mi439_4_19-ap1a-userdebug || lunch blaze_Mi439_4_19-userdebug
+lunch lineage_Mi439_4_19-userdebug || lunch lineage_Mi439_4_19-ap1a-userdebug
 echo "============="
+
 # Make cleaninstall
 make installclean
 echo "============="
 
 # Build rom
-mka bacon
+m evolution
