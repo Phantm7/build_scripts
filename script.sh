@@ -14,11 +14,17 @@ echo "============================"
 echo "Local manifest clone success"
 echo "============================"
 
-# build
+# Sync
 /opt/crave/resync.sh
 echo "============="
 echo "Sync success"
 echo "============="
+
+cd packages/apps/Dialer
+git fetch github --unshallow
+git fetch https://github.com/ProjectBlaze/packages_apps_Dialer.git 14
+git cherry-pick f0052a5
+cd ../../..
 
 # keys
 # mkdir vendor/lineage-priv
