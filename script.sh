@@ -3,13 +3,13 @@
 rm -rf .repo/local_manifests/
 
 # repo init rom
-repo init -u https://github.com/Evolution-XYZ/manifest -b udc --git-lfs
+repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/PhantomEnigma/local_manifests -b a14-evoxyz .repo/local_manifests
+git clone https://github.com/PhantomEnigma/local_manifests -b a14-rising .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -21,11 +21,12 @@ echo "Sync success"
 echo "============="
 
 # keys
-# mkdir vendor/lineage-priv
-# cp build-keys/* vendor/lineage-priv
-# echo "============="
-# echo "Keys copied"
-# echo "============="
+rm -rf vendor/lineage-priv
+mkdir vendor/lineage-priv
+cp build-keys/* vendor/lineage-priv
+echo "============="
+echo "Keys copied"
+echo "============="
 
 # Export
 export BUILD_USERNAME=Phantom
@@ -37,12 +38,8 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch lineage_Mi439_4_19-userdebug || lunch lineage_Mi439_4_19-ap1a-userdebug
-echo "============="
-
-# Make cleaninstall
-make installclean
+riseup Mi439_4_19 userdebug
 echo "============="
 
 # Build rom
-m evolution
+rise b
