@@ -14,6 +14,10 @@ echo "============================"
 echo "Local manifest clone success"
 echo "============================"
 
+cd .repo/repo
+git pull -r
+cd ../..
+
 # Sync
 /opt/crave/resync.sh
 echo "============="
