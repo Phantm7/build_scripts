@@ -25,9 +25,9 @@ echo "Sync success"
 echo "============="
 
 # keys
-rm -rf vendor/lineage-priv
-mkdir vendor/lineage-priv
-cp -r build-keys/* vendor/lineage-priv
+#rm -rf vendor/lineage-priv
+#mkdir vendor/lineage-priv
+#cp -r build-keys/* vendor/lineage-priv
 echo "============="
 echo "Keys copied"
 echo "============="
