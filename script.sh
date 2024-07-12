@@ -35,7 +35,7 @@ echo "============="
 # Export
 export BUILD_USERNAME=Phantom
 export BUILD_HOSTNAME=crave
-export TARGET_KERNEL_CLANG_VERSION=r487747c
+export TARGET_KERNEL_CLANG_VERSION=r416183b
 echo "======= Export Done ======"
 
 # Set up build environment
