@@ -24,10 +24,19 @@ echo "============="
 echo "Sync success"
 echo "============="
 
+# Remove overrides
+# Define a list of packages to remove
+echo "===== Remove overrides started ====="
+
+OVER_PACKAGES=("GoogleContacts" "GoogleDialer" "PrebuiltBugle" "dialer")
+for PACKAGEU in "${OVER_PACKAGES[@]}"; do
+find vendor/gms -name 'common-vendor.mk' -exec sed -i "/$PACKAGEU/d" {} \;
+done
+echo "===== Remove overrides Success ====="
+
 # Export
 export BUILD_USERNAME=Phantom
 export BUILD_HOSTNAME=crave
-
 export MITHORIUM_QCOM_HALS_DEFAULT_VARIANT=LA.UM.9.6.4.r1-05500-89xx.QSSI13.0
 echo "======= Export Done ======"
 
