@@ -19,6 +19,13 @@ echo "============="
 echo "Sync success"
 echo "============="
 
+#Cherry-pick
+cd vendor/addons
+git fetch crdroid --unshallow
+git fetch https://github.com/RisingTechOSS/android_vendor_addons fourteen
+git cherry-pick dbd659e
+cd ../..
+
 # Export
 export BUILD_USERNAME=Phantom
 export BUILD_HOSTNAME=crave
