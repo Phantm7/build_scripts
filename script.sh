@@ -19,13 +19,22 @@ echo "============="
 echo "Sync success"
 echo "============="
 
-#Cherry-pick
+
+echo "===== Cherry-pick stuff started ====="
+
 cd vendor/addons
 git fetch crdroid --unshallow
 git fetch https://github.com/RisingTechOSS/android_vendor_addons fourteen
 git cherry-pick dbd659e
 cd ../..
 
+cd packages/apps/Updater
+git fetch crdroid --unshallow
+git fetch https://github.com/PhantomEnigma/android_packages_apps_Updater 14.0
+git cherry-pick 946090a
+cd ../../..
+
+echo "===== Cherry-pick Ended ====="
 # Export
 export BUILD_USERNAME=Phantom
 export BUILD_HOSTNAME=crave
