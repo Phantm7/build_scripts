@@ -2,13 +2,13 @@
 
 rm -rf .repo/local_manifests/
 
-repo init -u https://github.com/crdroidandroid/android.git -b 13.0 --git-lfs
+repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 13
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/PhantomEnigma/local_manifests -b a13-rev .repo/local_manifests
+git clone https://github.com/PhantomEnigma/local_manifests -b a13-derp .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -20,21 +20,6 @@ echo "Sync success"
 echo "============="
 
 
-echo "===== Cherry-pick stuff started ====="
-
-cd vendor/addons
-git fetch crdroid --unshallow
-git fetch https://github.com/RisingTechOSS/android_vendor_addons fourteen
-git cherry-pick dbd659e
-cd ../..
-
-cd packages/apps/Updater
-git fetch crdroid --unshallow
-git fetch https://github.com/PhantomEnigma/android_packages_apps_Updater 13.0
-git cherry-pick 946090a
-cd ../../..
-
-echo "===== Cherry-pick Ended ====="
 # Export
 export BUILD_USERNAME=Phantom
 export BUILD_HOSTNAME=crave
@@ -46,6 +31,6 @@ echo "======= Export Done ======"
 source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
-lunch lineage_Mi439_4_19-userdebug
+lunch derp_Mi439_4_19-userdebug
 make installclean
-mka bacon
+mka derp
