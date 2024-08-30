@@ -30,7 +30,7 @@ cd ../..
 
 cd packages/apps/Updater
 git fetch crdroid --unshallow
-git fetch https://github.com/PhantomEnigma/android_packages_apps_Updater 14.0
+git fetch https://github.com/PhantomEnigma/android_packages_apps_Updater 13.0
 git cherry-pick 946090a
 cd ../../..
 
