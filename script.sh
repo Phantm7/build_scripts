@@ -30,6 +30,6 @@ echo "======= Export Done ======"
 source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
-lunch aosp_Mi439_4_19-ap2a-buildtype
+lunch aosp_Mi439_4_19-ap2a-userdebug
 make installclean
 mka bacon
