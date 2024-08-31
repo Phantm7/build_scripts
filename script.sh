@@ -1,14 +1,13 @@
 #!/bin/bash
 
 rm -rf .repo/local_manifests/
-
-repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 13
+repo init -u https://github.com/PixelOS-AOSP/manifest.git -b fourteen --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/PhantomEnigma/local_manifests -b a13-derp .repo/local_manifests
+git clone https://github.com/PhantomEnigma/local_manifests -b a14-pixelos .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -31,6 +30,6 @@ echo "======= Export Done ======"
 source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
-lunch derp_Mi439_4_19-userdebug
+lunch aosp_Mi439_4_19-ap2a-buildtype
 make installclean
-mka derp
+mka bacon
