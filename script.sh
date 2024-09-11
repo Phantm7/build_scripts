@@ -20,12 +20,6 @@ echo "============="
 echo "Sync success"
 echo "============="
 
-# keys
-git clone https://github.com/PhantomEnigma/build_keys.git -b keys build_keys
-cp build_keys/* vendor/derp/signing/keys
-echo "============="
-echo "Keys copied"
-echo "============="
 
 # Remove overrides
 # Define a list of packages to remove
@@ -47,7 +41,7 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch derp_Mi439_4_19-ap1a-userdebug || lunch derp_Mi439_4_19-userdebug
+lunch derp_Mi439_4_19-ap3a-userdebug || lunch derp_Mi439_4_19-userdebug
 echo "============="
 # Make cleaninstall
 make installclean
