@@ -44,11 +44,12 @@ git cherry-pick ba93896
 cd ../..
 
 #Bypass SAF
-cd vendor/addons
+cd frameworks/base
 git fetch crdroid --unshallow
-git fetch https://github.com/RisingTechOSS/android_vendor_addons fourteen
-git cherry-pick dbd659e
+git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
+git cherry-pick e016188
 cd ../..
+
 
 echo "===== Cherry-pick Ended ====="
 # Export
