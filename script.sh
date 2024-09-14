@@ -37,10 +37,10 @@ git cherry-pick 946090a
 cd ../../..
 
 #App Downgrade
-cd vendor/addons
+cd frameworks/base
 git fetch crdroid --unshallow
-git fetch https://github.com/RisingTechOSS/android_vendor_addons fourteen
-git cherry-pick dbd659e
+git fetch https://github.com/RisingTechOSS/android_frameworks_base fourteen
+git cherry-pick ba93896
 cd ../..
 
 #Bypass SAF
