@@ -66,7 +66,8 @@ echo "====== Envsetup Done ======="
 lunch lineage_Mi439_4_19-userdebug
 make installclean
 mka bacon
-cp out/target/product/*/*.zip 
+
+cp out/target/product/*/*.zip .
 echo "Test started"
 cd frameworks/base
 git fetch crdroid --unshallow
