@@ -96,12 +96,12 @@ git fetch https://github.com/PhantomEnigma/android_packages_apps_Updater 13.0
 git cherry-pick 946090a
 cd ../../..
 
-#Bypass SAF
+#App Downgrade
 cd frameworks/base
 git fetch crdroid --unshallow
-git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
-git cherry-pick 7b68921
-cd ../..
+git fetch https://github.com/RisingTechOSS/android_frameworks_base fourteen
+git cherry-pick ba93896
+cd ../.
 
 echo "===== Cherry-pick Ended ====="
 # Export
