@@ -47,7 +47,7 @@ cd ../..
 cd frameworks/base
 git fetch crdroid --unshallow
 git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
-git cherry-pick e016188
+git cherry-pick 7b68921
 cd ../..
 
 
