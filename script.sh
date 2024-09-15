@@ -68,7 +68,11 @@ make installclean
 mka bacon
 cp out/target/product/*/*.zip 
 echo "Test started"
+cd frameworks/base
+git fetch crdroid --unshallow
+git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
 git cherry-pick 00b7ee6
+cd ../..
 # Set up build environment
 source build/envsetup.sh
 echo "====== Envsetup Done ======="
