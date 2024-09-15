@@ -48,8 +48,7 @@ cd frameworks/base
 git fetch crdroid --unshallow
 git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
 git cherry-pick 7b68921
-echo "Test started"
-git cherry-pick 00b7ee6
+
 cd ../..
 
 echo "===== Cherry-pick Ended ====="
@@ -60,6 +59,16 @@ export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
 
+# Set up build environment
+source build/envsetup.sh
+echo "====== Envsetup Done ======="
+
+lunch lineage_Mi439_4_19-userdebug
+make installclean
+mka bacon
+cp out/target/product/*/*.zip 
+echo "Test started"
+git cherry-pick 00b7ee6
 # Set up build environment
 source build/envsetup.sh
 echo "====== Envsetup Done ======="
