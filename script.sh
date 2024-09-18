@@ -41,18 +41,12 @@ cd frameworks/base
 git fetch crdroid --unshallow
 git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
 git cherry-pick 7b68921
-cd ../..
 
 #Force LTA CA
-cd frameworks/base
-git fetch crdroid --unshallow
 git fetch https://github.com/ProjectEverest/frameworks_base 14
 git cherry-pick 49b962b
-cd ../..
 
-# Fix PlayIntegrity
-cd frameworks/base
-git fetch crdroid --unshallow
+#Fix Device Integrity
 git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
 git cherry-pick 3429a7e
 cd ../..
