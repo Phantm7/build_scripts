@@ -49,11 +49,6 @@ git fetch crdroid --unshallow
 git fetch https://github.com/ProjectEverest/frameworks_base 14
 git cherry-pick 49b962b
 cd ../..
-cd packages/apps/Settings
-git fetch crdroid --unshallow
-git fetch https://github.com/ProjectEverest/packages_apps_Settings 14
-git cherry-pick dd8f4ae
-cd ../../..
 
 # Fix PlayIntegrity
 cd frameworks/base
