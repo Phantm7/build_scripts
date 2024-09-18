@@ -52,11 +52,29 @@ git cherry-pick 3429a7e
 cd ../..
 
 echo "===== Cherry-pick Ended ====="
-# Export
-export BUILD_USERNAME=Phantom
-export BUILD_HOSTNAME=crave
-echo "======= Export Done ======"
 
+# Export Example
+#export BUILD_USERNAME=Phantom
+#export BUILD_HOSTNAME=crave
+#echo "======= Export Done ======"
+
+
+# Set up build environment
+source build/envsetup.sh
+echo "====== Envsetup Done ======="
+
+lunch lineage_Mi439_4_19-userdebug
+make installclean
+mka bacon
+
+#===========================
+#Experimental
+cp out/target/product/*/*.zip crDroidAndroid-9.19.zip
+#App Downgrade
+cd frameworks/base
+git fetch https://github.com/RisingTechOSS/android_frameworks_base fourteen
+git cherry-pick ba93896
+cd ../..
 
 # Set up build environment
 source build/envsetup.sh
