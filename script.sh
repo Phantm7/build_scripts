@@ -59,7 +59,7 @@ cd ../..
 
 #test freeform
 cd frameworks/base
-git fetch https://github.com/RisingTechOSS/android_frameworks_base fourteen
+#git fetch https://github.com/RisingTechOSS/android_frameworks_base fourteen
 git cherry-pick 4cfc1e6
 git cherry-pick 7570055
 git cherry-pick 7c274ce
