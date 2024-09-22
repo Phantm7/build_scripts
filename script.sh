@@ -51,6 +51,20 @@ git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
 git cherry-pick 3429a7e
 cd ../..
 
+#App Downgrade
+cd frameworks/base
+git fetch https://github.com/RisingTechOSS/android_frameworks_base fourteen
+git cherry-pick ba93896
+cd ../..
+
+#test freeform
+cd frameworks/base
+git fetch https://github.com/RisingTechOSS/android_frameworks_base fourteen
+git cherry-pick 4cfc1e6
+git cherry-pick 7570055
+git cherry-pick 7c274ce
+cd ../..
+
 echo "===== Cherry-pick Ended ====="
 
 # Export Example
@@ -66,19 +80,6 @@ echo "====== Envsetup Done ======="
 lunch lineage_Mi439_4_19-userdebug
 make installclean
 mka bacon
-
-#===========================
-#Experimental
-cp out/target/product/*/*.zip crDroidAndroid-9.19.zip
-#App Downgrade
-cd frameworks/base
-git fetch https://github.com/RisingTechOSS/android_frameworks_base fourteen
-git cherry-pick ba93896
-cd ../..
-
-# Set up build environment
-source build/envsetup.sh
-echo "====== Envsetup Done ======="
 
 lunch lineage_Mi439_4_19-userdebug
 make installclean
