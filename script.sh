@@ -29,6 +29,15 @@ cd vendor/addons
 git fetch crdroid --unshallow
 git fetch https://github.com/RisingTechOSS/android_vendor_addons fourteen
 git cherry-pick dbd659e
+
+#Force LTA CA
+cd frameworks/base
+git https://github.com/RisingTechOSS/android_frameworks_base fourteen
+git cherry-pick 9756c4c
+
+#Downgrade
+git fetch https://github.com/RisingTechOSS/android_frameworks_base fourteen
+git cherry-pick ba93896
 cd ../..
 # Set up build environment
 source build/envsetup.sh
