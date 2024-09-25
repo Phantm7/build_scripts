@@ -22,7 +22,6 @@ echo "============="
 # Export
 export BUILD_USERNAME=Phantom
 export BUILD_HOSTNAME=crave
-export MITHORIUM_QCOM_HALS_DEFAULT_VARIANT=LA.UM.9.6.4.r1-05500-89xx.QSSI13.0
 echo "======= Export Done ======"
 
 #Cherry-pick
