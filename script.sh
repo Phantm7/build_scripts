@@ -43,7 +43,6 @@ cd ../..
 # Set up build environment
 source build/envsetup.sh
 echo "====== Envsetup Done ======="
-
-lunch lineage_Mi439_4_19-ap3a-userdebug || lunch lineage_Mi439_4_19-ap2a-userdebug || lunch lineage_Mi439_4_19-userdebug
+lunch lineage_Mi439_4_19-ap2a-userdebug || lunch lineage_Mi439_4_19-userdebug
 make installclean
 mka bacon
