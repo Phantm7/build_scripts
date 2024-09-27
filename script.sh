@@ -20,14 +20,15 @@ echo "Sync success"
 echo "============="
 
 # Export
-export BUILD_USERNAME=Phantom
-export BUILD_HOSTNAME=crave
-echo "======= Export Done ======"
+#export BUILD_USERNAME=Phantom
+#echo "======= Export Done ======"
 
 
 #Framework_base patches
 cd frameworks/base
+
 git fetch crdroid --unshallow
+#fetch Rising
 git fetch https://github.com/RisingTechOSS/android_frameworks_base fourteen
 #Force LTA CA
 git cherry-pick 9756c4c
