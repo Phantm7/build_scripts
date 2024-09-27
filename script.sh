@@ -24,11 +24,6 @@ export BUILD_USERNAME=Phantom
 export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
-#Cherry-pick
-cd vendor/addons
-git fetch crdroid --unshallow
-git fetch https://github.com/RisingTechOSS/android_vendor_addons fourteen
-git cherry-pick dbd659e
 
 #Framework_base patches
 cd frameworks/base
