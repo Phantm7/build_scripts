@@ -23,23 +23,6 @@ echo "============="
 #export BUILD_USERNAME=Phantom
 #echo "======= Export Done ======"
 
-
-#Framework_base patches
-cd frameworks/base
-
-git fetch crdroid --unshallow
-#fetch Rising
-git fetch https://github.com/RisingTechOSS/android_frameworks_base fourteen
-#Force LTA CA
-git cherry-pick 9756c4c
-#Downgrade
-git cherry-pick ba93896
-#SAF
-git fetch https://github.com/PhantomEnigma/android_frameworks_base 14.0
-git cherry-pick 7903db5
-git cherry-pick be9a03b
-git cherry-pick 1eb9c08
-cd ../..
 # Set up build environment
 source build/envsetup.sh
 echo "====== Envsetup Done ======="
