@@ -28,6 +28,7 @@ git cherry-pick 9756c4c
 #Downgrade
 git cherry-pick ba93896
 cd ../..
+
 #toggle for LTE CA
 cd packages/apps/Settings
 git fetch crdroid --unshallow
@@ -35,24 +36,17 @@ git fetch https://github.com/RisingTechOSS/android_packages_apps_Settings fourte
 git cherry-pick 041f5f0
 cd ../../..
 
-# Export
-#export BUILD_USERNAME=Phantom
-#echo "======= Export Done ======"
-
-# Set up build environment
-source build/envsetup.sh
-echo "====== Envsetup Done ======="
-lunch lineage_Mi439_4_19-ap2a-userdebug || lunch lineage_Mi439_4_19-userdebug
-make installclean
-mka bacon
-
-#test
-cp out/target/product/*/*.zip .
+#json support for PIF
 cd frameworks/base
 git fetch https://github.com/PhantomEnigma/android_frameworks_base 14.0
 git cherry-pick b8c1f87
 git cherry-pick 5d03127
 cd ../..
+
+# Export
+#export BUILD_USERNAME=Phantom
+#echo "======= Export Done ======"
+
 # Set up build environment
 source build/envsetup.sh
 echo "====== Envsetup Done ======="
