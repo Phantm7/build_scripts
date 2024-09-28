@@ -31,8 +31,8 @@ cd ../..
 #toggle for LTE CA
 cd packages/apps/Settings
 git fetch crdroid --unshallow
-git fetch https://github.com/AlphaDroid-Project/packages_apps_Settings alpha-14
-git cherry-pick accb652
+git fetch https://github.com/RisingTechOSS/android_packages_apps_Settings fourteen
+git cherry-pick 041f5f0
 cd ../../..
 
 # Export
