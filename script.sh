@@ -29,7 +29,7 @@ git cherry-pick 9756c4c
 git cherry-pick ba93896
 cd ../..
 #toggle for LTE CA
-cd packages/apps/settings
+cd packages/apps/Settings
 git fetch crdroid --unshallow
 git fetch https://github.com/AlphaDroid-Project/packages_apps_Settings alpha-14
 git cherry-pick accb652
