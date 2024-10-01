@@ -29,19 +29,6 @@ git fetch https://github.com/RisingTechOSS/android_vendor_addons fourteen
 git cherry-pick dbd659e
 cd ../..
 
-# OTA support
-cd packages/apps/Updater
-git fetch crdroid --unshallow
-git fetch https://github.com/PhantomEnigma/android_packages_apps_Updater 13.0
-git cherry-pick 946090a
-cd ../../..
-
-#Bypass SAF
-cd frameworks/base
-git fetch crdroid --unshallow
-git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
-git cherry-pick 7b68921
-
 #Force LTA CA
 git fetch https://github.com/ProjectEverest/frameworks_base 14
 git cherry-pick 49b962b
@@ -77,7 +64,7 @@ echo "===== Cherry-pick Ended ====="
 source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
-lunch lineage_Mi439_4_19-userdebug
+lunch lineage_Mi439_4_19-user
 make installclean
 mka bacon
 
