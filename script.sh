@@ -30,12 +30,15 @@ git cherry-pick dbd659e
 cd ../..
 
 #Force LTA CA
+cd frameworks/base
+git fetch crdroid --unshallow
 git fetch https://github.com/ProjectEverest/frameworks_base 14
 git cherry-pick 49b962b
 
-#Fix Device Integrity
+#PIF
+cd frameworks/base
 git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
-git cherry-pick 3429a7e
+git cherry-pick 69f4899
 cd ../..
 
 #App Downgrade
