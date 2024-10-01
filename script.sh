@@ -31,6 +31,7 @@ cd ../..
 
 #PIF
 cd frameworks/base
+git fetch crdroid --unshallow
 git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
 git cherry-pick 69f4899
 cd ../..
@@ -48,9 +49,5 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 lunch lineage_Mi439_4_19-user
-make installclean
-mka bacon
-
-lunch lineage_Mi439_4_19-userdebug
 make installclean
 mka bacon
