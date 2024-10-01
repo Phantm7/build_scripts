@@ -29,12 +29,6 @@ git fetch https://github.com/RisingTechOSS/android_vendor_addons fourteen
 git cherry-pick dbd659e
 cd ../..
 
-#Force LTA CA
-cd frameworks/base
-git fetch crdroid --unshallow
-git fetch https://github.com/ProjectEverest/frameworks_base 14
-git cherry-pick 49b962b
-
 #PIF
 cd frameworks/base
 git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
