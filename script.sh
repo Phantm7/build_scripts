@@ -48,6 +48,6 @@ echo "===== Cherry-pick Ended ====="
 source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
-lunch lineage_Mi439_4_19-user
+lunch lineage_Mi439_4_19-userdebug
 make installclean
 mka bacon
