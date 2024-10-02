@@ -33,7 +33,7 @@ cd ../..
 cd frameworks/base
 git fetch crdroid --unshallow
 git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
-git cherry-pick 69f4899
+git cherry-pick e08cba2
 cd ../..
 
 echo "===== Cherry-pick Ended ====="
