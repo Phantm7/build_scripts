@@ -8,7 +8,7 @@ echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/PhantomEnigma/local_manifests -b a13-rev .repo/local_manifests
+git clone https://github.com/PhantomEnigma/local_manifests -b a13-afterlife .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
