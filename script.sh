@@ -2,7 +2,7 @@
 
 rm -rf .repo/local_manifests/
 
-repo init -u https://github.com/crdroidandroid/android.git -b 13.0 --git-lfs
+repo init --depth=1 --no-repo-verify -u https://github.com/AfterLifePrjkt13/android_manifest.git -b LTS -g default,-mips,-darwin,-notdefault
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -48,6 +48,6 @@ echo "===== Cherry-pick Ended ====="
 source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
-lunch lineage_Mi439_4_19-userdebug
+lunch afterlife_Mi439_4_19-userdebug
 make installclean
-mka bacon
+mka bacon || mka afterlife || m afterlife -j16
