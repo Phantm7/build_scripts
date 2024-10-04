@@ -20,23 +20,16 @@ echo "Sync success"
 echo "============="
 
 
-echo "===== Cherry-pick stuff started ====="
-
-# 3 row a11 QS
-cd vendor/addons
-git fetch crdroid --unshallow
-git fetch https://github.com/RisingTechOSS/android_vendor_addons fourteen
-git cherry-pick dbd659e
-cd ../..
+#echo "===== Cherry-pick stuff started ====="
 
 #PIF
-cd frameworks/base
-git fetch crdroid --unshallow
-git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
-git cherry-pick e08cba2
-cd ../..
+#cd frameworks/base
+#git fetch crdroid --unshallow
+#git fetch https://github.com/PhantomEnigma/android_frameworks_base 13.0
+#git cherry-pick e08cba2
+#cd ../..
 
-echo "===== Cherry-pick Ended ====="
+#echo "===== Cherry-pick Ended ====="
 
 # Export Example
 #export BUILD_USERNAME=Phantom
