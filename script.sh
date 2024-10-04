@@ -43,4 +43,4 @@ echo "====== Envsetup Done ======="
 
 lunch afterlife_Mi439_4_19-userdebug
 make installclean
-mka bacon || mka afterlife || m afterlife -j16
+mka bacon || mka afterlife || m afterlife -j$(nproc --all)
