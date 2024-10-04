@@ -20,7 +20,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "curl https://raw.githubusercontent.com/PhantomEnigma/build_scripts/crd-13-mtho/script.sh | bash"
+          command: "curl https://raw.githubusercontent.com/PhantomEnigma/build_scripts/crd-13-experimental/script.sh | bash"
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
