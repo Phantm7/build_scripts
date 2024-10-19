@@ -3,7 +3,7 @@
 rm -rf .repo/local_manifests/
 
 # repo init rom
-repo init -u https://github.com/Evolution-XYZ/manifest -b udc --git-lfs
+repo init -u https://github.com/Evolution-X/manifest -b udc --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
@@ -38,7 +38,7 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch lineage_Mi439_4_19-userdebug || lunch lineage_Mi439_4_19-ap3a-userdebug
+lunch lineage_Mi439_4_19-userdebug || lunch lineage_Mi439_4_19-ap3a-userdebug || lunch lineage_Mi439_4_19-ap2a-userdebug
 echo "============="
 
 # Make cleaninstall
